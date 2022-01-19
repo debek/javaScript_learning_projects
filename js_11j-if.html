@@ -1,0 +1,22 @@
+<meta charset="utf-8" />
+
+<script>
+
+var waga = parseFloat(prompt("Podaj wage: "));
+var wzrost = parseFloat(prompt("Podaj wzrost: "));
+
+var bmi = waga / (wzrost*wzrost);
+console.log(`BMI wynosi ${bmi}`);
+
+
+if(bmi >= 18.5 && bmi <= 24.9){
+    console.log(`Waga prawidłowa`);
+}
+else if(bmi > 24.9){
+    console.log(`Nadwaga`);
+}
+else if(bmi < 18.5){
+    console.log(`Niedowaga`);
+}
+
+</script>

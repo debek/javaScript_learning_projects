@@ -1,0 +1,62 @@
+<meta charset="utf-8" />
+
+<script>
+
+var suma = 0;
+var ilosc = 0;
+var srednia = 0;
+var parzyste = 0;
+var nieparzyste = 0;
+var min = 0;
+var max = 0;
+
+while(true){
+
+    // Jeli min lub max nie jest jeszcze wpisane to deklaruje ja pierwszy raz
+    var input = parseInt(prompt("Podaj liczbe:"));
+
+    // Jesli 0 to wylaczamy apke
+    if(input == 0){
+    break;
+    }
+
+    // Zadania arytmetyczne
+    suma = suma + input;
+    ilosc = ilosc + 1;
+    srednia = suma / ilosc;
+
+    // console.log(ilosc)
+    if(ilosc == 1){
+        min = input;
+        max = input;
+    }
+
+    // Deklraujemy ilosc parzystych i nieparzystych
+    if(input%2 == 0){
+        parzyste = parzyste +1
+    }
+    else if(input%2 != 0){
+        nieparzyste = nieparzyste +1
+    }
+
+    // Deklarujemy min i max jesli jest wieksze lub mniejsze od obecnej wartosci
+    if(input < min){
+        min = input;
+    }
+    else if(input > max){
+        max = input;
+    }
+
+    // Output
+    console.clear()
+    console.log(`Suma podanych liczb: ${suma}`)
+    console.log(`Ilość podanych liczb: ${ilosc}`)
+    console.log(`Srednia podanych liczb: ${srednia}`)
+    console.log(`Liczba parzystych liczb: ${parzyste}`)
+    console.log(`Liczba nieaprzystych liczb: ${nieparzyste}`)
+    console.log(`Max liczba to: ${min}`)
+    console.log(`Min liczba to: ${max}`)
+
+}
+
+</script>

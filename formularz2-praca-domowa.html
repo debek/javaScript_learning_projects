@@ -1,0 +1,196 @@
+<!doctype html>
+<html lang="pl">
+<head>
+    <title>Formularz Reklamacyjny</title>
+    <meta charset="UTF-8" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Barlow:wght@100&display=swap" rel="stylesheet">
+    <style>
+        .div1 {
+            background-color: white;
+            width: 600px;
+            padding: 10px;
+            margin: 1px;
+            -webkit-box-shadow: 0px 6px 10px -4px rgba(0,0,0,0.75);
+            -moz-box-shadow: 0px 6px 10px -4px rgba(0,0,0,0.75);
+            box-shadow: 0px 6px 10px -4px rgba(0,0,0,0.75);
+            border-left: 3px solid green;
+            margin: 0 auto;
+        }
+
+        .div2 {
+            background-color: white;
+            width: 600px;
+            padding: 10px;
+            margin: 1px;
+            -webkit-box-shadow: 0px 6px 10px -4px rgba(0,0,0,0.75);
+            -moz-box-shadow: 0px 6px 10px -4px rgba(0,0,0,0.75);
+            box-shadow: 0px 6px 10px -4px rgba(0,0,0,0.75);
+            border-left: 3px solid black;
+            margin: 0 auto;
+        }
+
+        .div3 {
+            background-color: white;
+            width: 600px;
+            padding: 10px;
+            margin: 1px;
+            -webkit-box-shadow: 0px 6px 10px -4px rgba(0,0,0,0.75);
+            -moz-box-shadow: 0px 6px 10px -4px rgba(0,0,0,0.75);
+            box-shadow: 0px 6px 10px -4px rgba(0,0,0,0.75);
+            border-left: 3px solid blue;
+            margin: 0 auto;
+        }
+
+        .input, select {
+            border: 1px rgb(52, 140, 180) solid;
+            border-radius: 4px 4px 4px 4px;
+            -moz-border-radius: 4px 4px 4px 4px;
+            -webkit-border-radius: 4px 4px 4px 4px;
+        }
+
+        label{
+            /* border: green solid; */
+            width:200px;
+            display:inline-block;
+            text-align: right;
+        }
+
+        .pan-pani{
+            /* border: green solid; */
+            margin-left:200px;
+        }
+
+        h2{
+            /* border: green solid; */
+            font-family: Barlow; 
+            color: gray;
+        }
+
+
+        #sposob{
+            /* border: green solid; */
+            float: left;
+            text-align: right;
+            width: 200px;
+            height: 46px;
+            /* Wysokosc bloku. W ten posob mozna wysrodkowac teskt pionowo */
+            line-height: 46px;
+        }
+
+        .inline{
+            /* border: red solid; */
+            display:inline-block;
+            height: max-content;
+            
+        }
+
+    </style>
+</head>
+<body style="background-color: whitesmoke;">
+
+    <h1 style="font-family: Barlow; text-align: center;">Dopisanie zgłoszenia reklamacyjnego</h1>
+    
+        <div class="div1">
+            <h2>Reklamujący</h2>
+            <p class="pan-pani">
+                <input type="radio" name="auto" value="pan" class="box" /> Pan
+                <input type="radio" name="auto" value="pani" class="box"/> Pani
+            </p>
+            <p>
+                <label for="imie">Imię</label>
+                <input type="text" id="imie" name="imie" value="" class="input"/>
+            </p>
+            <p>
+                <label for="nazwisko">Nazwisko</label>
+                <input type="text" id="nazwisko" name="nazwisko" value="" class="input"/>
+            </p>
+            <p>
+                <label for="ulica">Ulica</label>
+                <input type="text" id="ulica" name="ulica" value="" class="input"/>
+            </p>
+            <p>
+                <label for="kod">Kod pocztowy</label>
+                <input type="text" id="kod" name="kod" value="" class="input"/>
+            </p>
+            <p>
+                <label for="miejscowosc">Miejscowość</label>
+                <input type="text" id="miejscowosc" name="imie" value="" class="input"/>
+            </p>
+            <p>
+                <label for="telefon">Nr telefonu</label>
+                <input type="text" id="telefon" name="telefon" value="" class="input"/>
+            </p>
+                <label for="email">Adres email</label>
+                <input type="text" id="email" name="email" value="" class="input"/>
+            <p>
+                <div id="sposob">
+                    Sposób powiadomienia
+                </div>
+                <div class="inline">
+                    <input type="checkbox" name="tel" value="tel"/> Telefon/SMS
+                </div><br>
+                <div class="inline">
+                    <input type="checkbox" name="mail" value="mail"/> e-mail
+                </div>
+        </div>
+        <p>
+
+        <div class="div2">
+            <h2>Reklamowany produkt</h2>
+            <p>
+                <label>Asortyment</label>
+                <select name="asortyment" class="box">
+                    <option disabled selected value> wybierz </option>
+                    <option value="KRK">Telewizor</option>
+                    <option value="POZ">Komputer</option>
+                    <option value="GWLKP">Telefon</option>
+                </select>
+            </p>
+            <p>
+                <label for="seryjny">Numer seryjny</label>
+                <input type="text" id="seryjny" name="seryjny" value="" class="input" size="30"/>
+            </p>
+            <p>
+                <label for="uwagi">Uwagi</label>
+                <input type="text" id="uwagi" name="uwagi" value="" class="input" size="50" />
+            </p>
+        </div>
+        <p>    
+
+        <div class="div3">
+            <h2>Dane zgłoszenia</h2>
+            <p>
+                <label for="dokument">Numer dokumentu zakupu</label>
+                <input type="text" id="dokument" name="dokument" value="" class="input" size="30"/>
+            </p>
+            <p>
+                <label for="zakup">Data zakupu</label>
+                <input type="date" id="zakup" name="zakup" value="" class="input"/>
+            </p>
+            <p>
+                <label for="wada">Data powstania wady</label>
+                <input type="date" id="wada" name="wada" value="" class="input"/>
+            </p>
+            <p>
+                <label for="przyczyna">Przyczyna reklamacji</label>
+                <input type="text" id="przyczyna" name="przyczyna" value="" class="input" size="50" />
+            </p>
+            <p>
+                <label for="opis" style="float: left;">Opis wady</label>
+                <textarea id="opis" name="opis" class="input" cols="42" rows="5" style="margin-left: 3px;"></textarea>
+            </p>
+            <p>
+                <label>Żądanie reklamującego</label>
+                <select name="zadanie" class="box">
+                    <option disabled selected value> wybierz </option>
+                    <option value="Zwrot">Telewizor</option>
+                    <option value="Naprawa">Komputer</option>
+                </select>
+            </p>
+        </div>
+        <p>
+
+</body>
+</html>

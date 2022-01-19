@@ -1,0 +1,32 @@
+    <meta charset="utf-8" />
+
+    <script>
+
+    var los = Math.floor((Math.random() * 10) + 1);
+
+    var flag = 0;
+    while(true){
+        
+        flag = flag + 1;
+
+        var input = parseInt(prompt("Podaj liczbe:"));
+        if(los == input){
+            console.log("Trafiłeś! Koniec gry");
+            break;
+        }
+        else if(los > input){
+            console.log("Mniejsza od wylosowanej");
+        }
+        else if(los < input){
+            console.log("Wieksza  od wylosowanej");
+        }
+
+        if(flag == 5){
+            console.log("Za duzo prob. Przegrales. Zacznij od nowa")
+            flag = 0;
+            los = Math.floor((Math.random() * 10) + 1);
+            continue;
+        }
+    }
+
+    </script>

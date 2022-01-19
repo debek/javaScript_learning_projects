@@ -1,0 +1,235 @@
+<!doctype html>
+<html lang="pl">
+<head>
+    <title>Formularz</title>
+    <meta charset="UTF-8" />
+    <style>
+        
+        .name{
+            /* border: yellow solid; */
+            float: left;
+            width: 100px;
+        }
+
+        .box{
+            /* border: yellow solid; */
+            display:inline-block;
+            margin-top: 2px;
+        }
+
+        .dodatkowe{
+            margin-left: 0px;
+        }
+
+        .inline{
+            /* border: yellow solid; */
+            display:inline-block;
+        }
+
+        .green-border{
+            /* border: green solid; */
+            width: 400px; 
+        }
+
+        .red-border{
+            /* border: red solid; */
+            width: 400px; 
+        }
+
+        .black-border{
+            /* border: black solid; */
+        }
+
+        .text-bold{
+            text-align: left; font-weight: bold;
+        }
+
+        #zakupy{
+            /* border: yellow solid; */
+            margin-top: 7px;
+            float: left;
+            width: 100px;
+        }
+
+        #prowadze{
+            /* border: yellow solid; */
+            margin-top: 7px;
+            float: left;
+            height: 110px;
+            width: 100px;
+        }
+
+        #zgoda{
+            float: left;
+        }
+        
+    </style>
+</head>
+<body>
+    <div class="red-border">
+        W celu uzyskania uprawnień nalezy:
+        <ol>  
+            <li>Wypełnić pponizszy formularz</li>
+            <li>Wydrukować kopię wypełnionego formularza</li>
+            <li>Przesłać wypełniony formularz pocztą</li>
+        </ol>
+    </div>
+    <form action="#" method="get">
+        <div class="green-border">
+            <span class="text-bold">Dane identyfikacyjne</span>
+            <hr/>
+            <div class="name">
+                <label for="firma">Firma:</label>
+            </div>
+            <div class="box">
+                <input type="text" name="firma" value="" autofocus="autofocus" id="firma"/>
+            </div><br>
+            <div class="name">
+                <label for="ulica">Ulica:</label>
+            </div>
+            <div class="box">
+                <input type="text" name="ulica" value="" class="box" id="ulica"/>
+            </div><br>
+            <div class="name">
+                <label for="miejscowosc">Miejscowość:</label>
+            </div>
+            <div class="box">
+                <input type="text" name="miejscowosc" value="" class="box" id="miejscowosc"/>
+            </div><br>
+            <div class="name">
+                <label for="kod">Kod pocztowy:</label>
+            </div>
+            <div class="box">
+                <input type="text" name="kod" value="" class="box" id="kod"/>
+            </div><br>
+            <div class="name">
+                <label for="nip">NIP:</label>
+            </div>
+            <div class="box">
+                <input type="text" name="nip" value="" class="box" id="nip"/>
+            </div><br>
+            <div class="name">
+                <label for="www">WWW:</label>
+            </div>
+            <div class="box">
+                <input type="text" name="www" value="" class="box" id="www"/>
+            </div><p>
+        </div>
+        <div class="red-border">
+            <span class="text-bold">Osoba kontaktowa</span>
+            <hr/>
+            <div class="name">
+                <label for="imie">Imie:</label>
+            </div>
+            <div class="box">
+                <input type="text" name="imie" value="" class="box" id="imie"/>
+            </div><br>
+            <div class="name">
+                <label for="nazwisko">Nazwisko:</label>
+            </div>
+            <div class="box">
+                <input type="text" name="nazwisko" value="" class="box" id="nazwisko"/>
+            </div><br>
+            <div class="name">
+                <label for="telefon">Telefon:</label>
+            </div>
+            <div class="box">
+                <input type="tel" name="teelfon" value="" class="box" id="telefon"/>
+            </div><br>
+            <div class="name">
+                Kraj
+            </div>
+            <div class="box">
+                <select name="kraj" class="box">
+                    <option value="KRK">Polska</option>
+                    <option value="POZ">Niemcy</option>
+                    <option value="GWLKP">Anglia</option>
+                </select>
+            </div><br>
+            <div class="name">
+                <label for="fax">Fax:</label>
+            </div>
+            <div class="box">
+                <input type="text" name="fax" value="" class="box" id="fax"/>
+            </div><br>
+            <div class="name">
+                <label for="email">Email:</label>
+            </div>
+            <div class="box">
+                <input type="text" name="email" value="" class="box" id="email"/>
+            </div><p>
+        </div>
+        <div class="green-border">
+            <span class="text-bold">Informacje dodatkowe</span>
+            <hr/>
+            <div class="black-border">
+                <div id="zakupy">
+                    Zakupy:
+                </div>
+                <div class="inline">
+                    <input type="radio" name="auto" value="detaliczne" class="dodatkowe"/> detaliczne <br/>
+                    <input type="radio" name="auto" value="hurtowe" class="dodatkowe"/> hurtowe
+                </div>
+            </div>
+            <div class="black-border">
+                <div id="prowadze">
+                    Prowadzę:
+                </div>
+                <div class="inline">
+                    <input type="checkbox" name="hurtownie" value="hurtownie" class="dodatkowe"/> hurtownie<br>
+                </div><br>
+                <div class="inline">
+                    <input type="checkbox" name="salon" value="salon" class="dodatkowe"/> salon<br>
+                </div><br>
+                <div class="inline">
+                    <input type="checkbox" name="sklep" value="sklep" class="dodatkowe"/> sklep<br>
+                </div><br>
+                <div class="inline">
+                    <input type="checkbox" name="GSM" value="GSM" class="dodatkowe"/> punkt z akcesoriami GSM<br>
+                </div><br>
+                <div class="inline">
+                    <label for="inny">inny </label>
+                    <input type="text" name="inny" value="" class="dodatkowe" id="inny"/>
+                </div><p>
+            </div>
+        </div>
+        <div class="red-border">
+            <span class="text-bold">Moja główna branza to</span>
+            <hr/>
+            <div class="box">
+                <input type="radio" name="auto" value="GSM"/> GSM <br/>
+                <input type="radio" name="auto" value="RTV"/> RTV <br/>
+                <input type="radio" name="auto" value="komputerowa"/> komputerowa <br/>
+                <input type="radio" name="auto" value="inna"/> inna
+                <input type="text" name="inny" value=""/>
+            </div><p>
+        </div>
+        <div class="green-border">
+            <span class="text-bold">Dane konfiguracyjne</span>
+            <hr/>
+            <div class="name">
+                <label for="login">Login:</label>
+            </div>
+            <div class="box">
+                <input type="text" name="login" value="" id="login"/>
+            </div><br>
+            <div class="name">
+                <label for="haslo">Hasło:</label>
+            </div>
+            <div class="box">
+                <input type="password" name="haslo" value="" id="haslo"/>
+            </div><br>
+            <div class="name">
+                <label for="haslo2">Powtórz hasło:</label>
+            </div>
+            <div class="box">
+                <input type="password" name="haslo2" value="" id="haslo2"/>
+            </div><p>
+            <div class="inline">
+                <input type="checkbox" name="zgoda" value="zgoda" id="zgoda" />Wyrazam zgodę na przetwarzanie danych osobowych...
+            </div><p>
+            Regulamin jest do pobrania <a href="#">tutaj</a>
+        </div>
+    </form>
+</body>
+</html>

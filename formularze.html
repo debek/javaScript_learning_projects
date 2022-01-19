@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+
+<html>
+
+    <head>
+        <title>moja strona :)</title>
+
+
+    </head>
+    <body>
+
+        <form action="#" method="get">
+
+            <p>
+                <label for="imie">Imię:</label><br/> <!-- etykieta -->
+                <input type="text" id="imie" name="imie" value="Robert" />
+            </p>
+            <p>
+                Nazwisko:<br/><!-- pole tekstowe, jednowierszowe -->
+                <input type="text" name="nazwisko" />
+            </p>
+            <p>
+                Hasło:<br/><!-- pole hasło -->
+                <input type="password" name="haslo" />
+            </p>
+            <p>
+                Danie:<br/> <!-- pole wielokrotnego wyboru -->
+                <input type="checkbox" name="dane1" value="pizza" /> PIZZA
+                <input type="checkbox" name="dane2" value="kebab" /> KEBAB
+                <input type="checkbox" name="dane3" value="burger" /> BURGER
+            </p>
+            <p>
+                Auto:<br/> <!-- pole jednokrotnego wyboru -->
+                <input type="radio" name="auto" value="bmw11" /> BMW
+                <input type="radio" name="auto" value="audi22" /> AUDI
+                <input type="radio" name="auto" value="fiat33" /> FIAT
+            </p>
+            <p>
+                <select name="miasto"> <!-- pole wyboru -->
+                    <option value="KRK">Kraków</option>
+                    <option value="POZ">Poznań</option>
+                    <option value="GWLKP">Gorzów Wielkopolski</option>
+                </select>
+            </p>
+            <p>
+                Uwagi:<br/>
+                <textarea name="uwagi">Tu wpisz uwagi....</textarea>
+            </p>
+          
+            <p>
+                <input type="submit" value="wyslij 1" />
+                <button stype="submit">wyślij 2</button>
+
+                <hr/>
+
+                <input type="reset" value="wyczysc 1" />
+                <button stype="reset">wyczysc 2</button>
+            </p>
+
+
+        </form>
+        
+    </body>
+
+</html>

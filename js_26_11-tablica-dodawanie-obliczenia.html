@@ -1,0 +1,32 @@
+<meta charset="utf-8" />
+
+<script>
+
+let tablica = [];
+let suma = 0;
+let srednia = 0;
+
+while(true){
+
+    let liczba = parseInt(prompt("Podaj liczbe: "));
+    if(liczba === 0){
+        break;
+    }
+    else{
+        tablica.push(liczba);
+    }
+}
+
+for(let x of tablica){
+    console.log(x);
+}
+
+for(let x of tablica){
+    suma = suma + x;
+}
+
+srednia = suma/tablica.length;
+
+console.log(suma, srednia);
+
+</script>

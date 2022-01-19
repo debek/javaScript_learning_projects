@@ -1,0 +1,61 @@
+<!doctype html>
+<html lang="pl">
+<head>
+    <title>Formularz lotów</title>
+    <meta charset="UTF-8" />
+</head>
+<body>
+    <form action="#" method="get">
+        <p>
+            <label for="imie">Twoje imię:</label><br/>
+            <!-- Dodane autofocus, zeby tutaj juz mrygalo -->
+            <input type="text" id="imie" name="imie" required autofocus/>
+            <!-- Lepsze pole text niż powyższe. Dodane tez required-->
+            <input type="text" id="imie" name="imie" placeholder="Tu wpisz imię" required />
+        </p>
+        <p>
+            <label for="nazwisko">Twoje nazwisko:</label><br/>
+            <input type="text" id="nazwisko" name="nazwisko" />
+        </p>
+        <p>
+            <label for="data">Data wylotu:</label><br/>
+            <!-- Typ date -->
+            <input type="date" id="data" name="data" />
+        </p>
+        <p>
+            Wylot z:<br/>
+            <select name="miastoz">
+                <option value="WAW">Warszawa</option>
+                <option value="GD">Gdańsk</option>
+                <option value="KR">Kraków</option>
+            </select>
+        </p>
+        <p>
+            Przyjazd do:<br/>
+            <select name="miastodo">
+                <option value="GD">Gdańsk</option>
+                <option value="WAW">Warszawa</option>
+                <option value="KR">Kraków</option>
+            </select>
+        </p>
+        <p>
+            Klasa VIP:<br/>
+            <input type="radio" name="vip" value="tak" /> TAK
+            <input type="radio" name="vip" value="nie" /> NIE
+        </p>
+        <p>
+            Posiłek:<br/>
+            <input type="checkbox" name="dane1" value="przystawka" /> Przystawka
+            <input type="checkbox" name="dane2" value="obiad" /> Obiad
+            <input type="checkbox" name="dane3" value="deser" /> Deser
+        </p>
+        <p>
+            Uwagi:<br/>
+            <textarea name="uwagi"></textarea>
+        </p>   
+        <p>
+            <input type="submit" value="Zarezerwuj" />
+            <input type="reset" value="Anuluj" />
+    </form>
+</body>
+</html>

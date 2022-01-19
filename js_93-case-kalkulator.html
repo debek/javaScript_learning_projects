@@ -1,0 +1,41 @@
+<meta charset="utf-8" />
+
+<script>
+
+var znak = prompt("Podaj znak: ");
+var liczba1 = parseInt(prompt("Podaj pierwszą liczbe: "));
+var liczba2 = parseInt(prompt("Podaj drugą liczbe: "));
+var wynik;
+
+switch(znak){
+
+    case "+":
+        wynik = liczba1 + liczba2
+        console.log(`Wynik dodawania to: ${wynik}`);
+    break;
+    case "-":
+        wynik = liczba1 - liczba2
+        console.log(`Wynik odejmowania to: ${wynik}`);
+    break;
+    case "*":
+        wynik = liczba1 * liczba2
+        console.log(`Wynik mnozenia to: ${wynik}`);
+    break;
+    case "/":
+        if(liczba2 === 0){
+            console.log(`Nie dziel przez zero`);
+        }
+        else if(liczba2 === 0){
+            console.log(`Nie dziel przez zero`);
+        }
+        else{
+            wynik = liczba1 / liczba2;
+            console.log(`Wynik dzielenia to: ${wynik}`);
+        }
+    break;
+
+    default:
+    console.log("Zly znak arytmetyczny");
+
+}
+</script>

@@ -1,0 +1,48 @@
+<meta charset="utf-8" />
+
+<script>
+
+var l1 = parseInt(prompt("Podaj liczbe: "));
+var min = l1;
+var max = l1;
+
+for(var i=1; i<5; i++){
+    var l1 = parseInt(prompt("Podaj liczbe: "));
+
+    if(l1 > max){
+        max = l1;
+    }
+    else if(l1 < min){
+        min = l1;
+    }
+}
+
+console.log(`Max to ${max}`);
+console.log(`Min to ${min}`);
+
+
+</script>
+
+<!-- SPOSOB 2 LEPSZY !!!
+
+var liczba;
+var max;
+var min;
+
+for(var i=1; i<=5; i++){
+    
+    var liczba = parseInt(prompt("podaj liczbe"));
+    
+    if(i === 1){
+        min = liczba;
+        max = liczba
+    }
+    else{
+        if(liczba > max){
+            max = liczba
+        }
+        if(liczba < min){
+            min = liczba
+        }
+    }
+} -->
