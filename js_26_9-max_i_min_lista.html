@@ -1,0 +1,30 @@
+<meta charset="utf-8" />
+
+<script>
+
+let tab = [];
+
+for(let i=1; i<=10; i++){
+    let random = Math.floor(Math.random() * 10);
+    tab.push(random);
+}
+console.log(tab);
+
+let tab_len = tab.length;
+let max = tab[0];
+let min = tab[0];
+
+for(let i=1; i<=tab_len; i++){
+    let index = i - 1;
+
+    if(tab[index] > max){
+        max = tab[index];
+    }
+    if(tab[index] < min){
+        min = tab[index];
+    }
+}
+console.log(`Min to: ${min}`);
+console.log(`Max to: ${max}`);
+
+</script>
