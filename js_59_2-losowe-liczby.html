@@ -1,0 +1,20 @@
+<meta charset="utf-8" />
+
+<script>
+
+var los = Math.floor(Math.random() * 10);
+
+do{
+    var user_number = prompt("Podaj liczbe:");
+    if(user_number>los){
+        console.log("Zgadywana liczba jest mniejsza");
+    }
+    else if(user_number<los){
+        console.log("Zgadywana liczba jest wieksza");
+    }
+    else if(user_number==los){
+        console.log(`Zgadleś! zgadywana liczba to ${los}`);
+    }
+}while(los != user_number);
+
+</script>
