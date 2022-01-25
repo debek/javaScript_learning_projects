@@ -1,0 +1,50 @@
+<meta charset="utf-8" />
+
+<script>
+
+let l1 = Math.floor(Math.random() * 10);
+let l2 = Math.floor(Math.random() * 10);
+
+for(let i=1; i<=3; i++){
+    let num = Math.floor(Math.random() * 3);
+    console.log(`Random num to  ${num}`);
+    
+    let wynik = 0;
+    let input = 0;
+    
+    switch(num){
+
+        case 0:
+            wynik = l1 + l2;
+            input = prompt(`Ile to jest: ${l1}+${l2}?`);
+            if(wynik == input){
+                console.log("Dobrze");
+            }
+            else{
+                console.log(`Zle. Wynik to ${wynik}`);
+            }
+        break;
+        case 1:
+            wynik = l1 - l2;
+            input = prompt(`Ile to jest: ${l1}-${l2}?`);
+            if(wynik == input){
+                console.log("Dobrze");
+            }
+            else{
+                console.log(`Zle. Wynik to ${wynik}`);
+            }
+        break;
+        case 2:
+            wynik = l1 * l2;
+            input = prompt(`Ile to jest: ${l1}*${l2}?`);
+            if(wynik == input){
+                console.log("Dobrze");
+            }
+            else{
+                console.log(`Zle. Wynik to ${wynik}`);
+            }
+        break;
+    }
+}
+
+</script>
