@@ -1,0 +1,23 @@
+<meta charset="utf-8" />
+
+<script>
+
+let suma;
+let liczba1 = prompt("Podaj słownie liczbe od 1-9: ");
+let liczba2 = prompt("Podaj słownie liczbe od 1-9: ");
+
+let mapa = new Map();
+mapa.set("jeden", 1);
+mapa.set("dwa", 2);
+mapa.set("trzy", 3);
+mapa.set("cztery", 4);
+mapa.set("pięć", 5);
+mapa.set("szcześć", 6);
+mapa.set("siedem", 7);
+mapa.set("osiem", 8);
+mapa.set("dziwięć", 9);
+
+suma = mapa.get(liczba1) *  mapa.get(liczba2);
+console.log(suma);
+
+</script>

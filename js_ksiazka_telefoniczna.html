@@ -1,0 +1,70 @@
+<meta charset="utf-8" />
+
+<script>
+
+tablicaKontaktow = []
+
+while(true){
+
+    let menu = prompt("D-dodaj, P-pokaz, U-usun, Z-zmiana, K-koniec").toUpperCase();
+
+    if(menu == "D"){
+        let imie = prompt("Podaj imie: ");
+        let nazwisko = prompt("Podaj nazwisko: ");
+        let telefon = prompt("Podaj telefon: ");
+
+        let kontakt = [imie, nazwisko, telefon];
+        tablicaKontaktow.push(kontakt);
+        console.log("Tablica kontaktow zostala dodana pomyslnie");
+    }
+    else if(menu == "P"){
+        // Zwraca tablice w tablicach
+        for(let x of tablicaKontaktow){
+            console.log(`Imie: ${x[0]} Nazwisko ${x[1]} Telefon ${x[2]}`);
+        }
+    }
+    else if(menu == "U"){
+        let nazwisko = prompt("Podaj nazwisko do usuniecia: ");
+        let znaleziono = false;
+        // Zwraca indexy ta petla
+        for(let x in tablicaKontaktow){
+            if (tablicaKontaktow[x][1] == nazwisko){
+                znaleziono = true;
+                tablicaKontaktow.splice(x, 1);
+                console.log("Pomyslnie usunieto");
+                break;
+            }
+            if(znaleziono === false){
+                console.log("Nie znaleziono kontaktu o podanym nazwisku")
+            }
+        }
+    }
+    else if(menu == "Z"){
+        let nazwisko = prompt("Podaj nazwisko: ");
+        let znaleziono = false;
+
+        let noweImie = prompt("Podaj nowe imie: ");
+        let noweNazwisko = prompt("Podaj nowe nazwisko: ");
+        let nowyTelefon = prompt("Podaj nowy telefon: ");
+
+        for(let x in tablicaKontaktow){
+            if (nazwisko === tablicaKontaktow[x][1])
+                let znaleziono = true;
+                tablicaKontaktow[x][0] = noweImie;
+                tablicaKontaktow[x][1] = noweNazwisko;
+                tablicaKontaktow[x][2] = nowyTelefon;
+            }
+            console.log("Zmieniono");
+            break;
+        }
+    }
+    else if(menu == "K"){
+        break;
+    }
+    else{
+        console.log("Nierozpoznana opcja menu")
+    }
+
+}
+
+</script>

@@ -1,0 +1,44 @@
+<meta charset="utf-8" />
+
+<script>
+
+let zbior = new Set();
+
+//dodawanie do zbioru
+zbior.add(5);
+zbior.add(2);
+zbior.add(1);
+zbior.add(7);
+zbior.add(9);
+zbior.add(12);
+
+console.log(zbior);
+
+zbior.add(7);
+zbior.add(7);
+zbior.add(7);
+zbior.add(7);
+zbior.add(3);
+zbior.add(7);
+zbior.add(7);
+
+console.log(zbior);
+
+//sprawdzenie czy dana liczba juz jest w zbiorze
+console.log(zbior.has(90))
+
+//usuwanie danych ze zbioru
+zbior.delete(12);
+
+console.log(zbior);
+
+//sprawdzenie rozmiaru zbioru
+console.log(zbior.size);
+
+//przegladaznie zbioru
+for(let x of zbior){
+    console.log(x);
+}
+
+
+</script>

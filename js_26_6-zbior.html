@@ -1,0 +1,22 @@
+<meta charset="utf-8" />
+
+<script>
+
+let zbior = new Set();
+let liczba;
+let proba;
+
+
+while(true){
+    liczba = Math.floor( (Math.random() * 10) +1);
+    zbior.add(liczba);
+    proba++;
+
+    if(zbior.size == 6){
+        break;
+    }
+}
+
+console.log(zbior);
+
+</script>

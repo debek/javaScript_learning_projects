@@ -1,0 +1,71 @@
+<meta charset="utf-8" />
+
+<script>
+
+let sklep = new Map();
+sklep.set("woda", 2.50);
+sklep.set("sok", 3.50);
+sklep.set("cola", 4.50);
+sklep.set("piwo", 5.50);
+
+
+let koszyk = new Map(); //produkt - ilosc
+
+while(true){
+
+    let menu = parseInt(prompt("1-dodaj produkt, 2-pokaz zawartosc koszyka, 3-kasa/koniec"));
+
+    if(menu == 1){
+
+        // //MOJ KOD
+        // let produkt = prompt("Podaj produkt: ");
+        // ilosc = parseInt(prompt("Podaj ilosc produktow: "));        
+        // if(koszyk.has(produkt)){
+        //     let nowaIlosc = koszyk.get(produkt) + ilosc;
+        //     koszyk.set(produkt, nowaIlosc)
+        // }
+        // else if(sklep.has(produkt)){
+        //     koszyk.set(produkt, ilosc);
+        // }
+
+        let produkt = prompt("Podaj nazwe produktu, ktroy chcesz kupic");
+
+        if(sklep.has(produkt)){
+            let ilosc = parseInt(prompt("Podaj ilość produktu: "))
+
+            if(koszyk.has(produkt)){
+                let dotychczasowaIlosc = koszyk.get(produkt);
+                let nowaIlosc = dotychczasowaIlosc + ilosc;
+                koszyk.set(produkt, nowaIlosc);
+            }
+            else{
+                koszyk.set(produkt, ilosc);
+            }
+        }
+        else{
+            console.log("Brak podanego produktu w sklepie");
+        }
+
+    }
+    else if(menu == 2){
+        for(let klucz of koszyk.keys()){
+            console.log(`Produkt: ${klucz}, Ile: ${koszyk.get(klucz)}`); 
+        }
+    }
+    else if(menu == 3){
+        
+        let suma = 0;
+
+        console.log(`PARAGON`);
+        for(let klucz of koszyk.keys()){
+            let wartosc = sklep.get(klucz) * koszyk.get(klucz);
+            console.log(`Produkt: ${klucz}, Cena: ${sklep.get(klucz)}, Ilość: ${koszyk.get(klucz)}, Wartość ${sklep.get(klucz)}`);            suma += wartosc;
+        }
+
+        console.log(`RAZEM DO ZAPLATY: ${suma} PLN`)
+        break;
+
+    }
+}
+
+</script>

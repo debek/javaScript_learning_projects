@@ -1,0 +1,32 @@
+<meta charset="utf-8" />
+
+<script>
+
+let mapa = new Map();
+
+//dodawanie i edycja do mapy
+mapa.set("sok", 2.50);
+mapa.set("cola", 3.50);
+mapa.set("woda", 1.50);
+
+console.log(mapa);
+
+//odczytywanie mapy
+console.log(mapa.get("cola"));
+
+for(let x of mapa.keys()){
+    console.log(x, mapa.get(x));
+}
+
+//czy klucz istnieje w mapie
+console.log(mapa.has("woda"));
+
+//usuwanie z mapy
+mapa.delete("sok");
+
+console.log(mapa);
+
+//rozmiar mapy- size bez nawiasów
+console.log(mapa.size);
+
+</script>
