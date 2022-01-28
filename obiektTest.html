@@ -1,0 +1,27 @@
+<meta charset="utf-8" />
+
+<script>
+
+    samolot = {
+        nazwa : "Szybowiec",
+        iloscOsob : 2,
+        kolor: "bialy",
+
+        lec: function(){
+            console.log("LECE!!");
+        },
+
+        laduj: function(){
+            console.log("LADUJE!!");
+        },
+
+        info: function(){
+            console.log(`Nazwa: ${this.nazwa}, Ilość osób: ${this.iloscOsob}, Kolor: ${this.kolor}`);
+        },
+    }
+
+    samolot.lec();
+    samolot.laduj();
+    samolot.info();
+
+</script>

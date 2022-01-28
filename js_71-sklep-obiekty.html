@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<meta charset="utf-8" />
+<script>
+
+let sklep = new Map();
+sklep.set("woda", 2.55);
+sklep.set("sok", 3.55);
+sklep.set("cola", 4.55);
+sklep.set("piwo", 4.25);
+
+class Koszyk{
+
+    constructor(){
+        this.zakupy = new Map();
+    }
+
+    dodajProdukt(produkt, ilosc){
+
+        //sok->5, wody->10
+        //dokupujemy 2 soki
+        //sok->7, wody->10
+       
+        if(this.zakupy.has(produkt)){
+            let dotychczasowaIlosc = this.zakupy.get(produkt);
+            let nowaIlosc = dotychczasowaIlosc + ilosc;
+            this.zakupy.set(produkt, nowaIlosc);
+        }
+        else{
+            this.zakupy.set(produkt, ilosc);
+        }
+    }
+
+    usunProdukt(produkt, ilosc){
+       
+        if(this.zakupy.has(produkt)){
+       
+            let dotychczasowaIlosc = this.zakupy.get(produkt);
+           
+            if(dotychczasowaIlosc > ilosc){
+                let nowaIlosc = dotychczasowaIlosc - ilosc;
+                this.zakupy.set(produkt, nowaIlosc);
+            }
+            else if(dotychczasowaIlosc == ilosc){
+                this.zakupy.delete(produkt);
+            }
+            else if(dotychczasowaIlosc < ilosc){
+                console.log("Za mało produktu w koszuku do usuniecia");
+            }
+        }
+        else{
+            console.log("Brak produktu w koszyku");
+        }
+
+    }
+
+}
+
+koszyk = new Koszyk();
+while(true){
+
+    let menu = prompt("D-dodaj do koszyka, P-pokaz zawartosc koszyka, U-usun z koszyka, K-kasa/koniec");
+
+    if(menu == "D"){
+        //pytania: produkt, ilosc
+        produkt = prompt("Podaj produkt: ");
+
+        if(sklep.has(produkt)){
+            ilosc = prompt("Podaj ilosc: ");
+
+            koszyk.dodajProdukt(produkt, ilosc);
+        }
+        else{
+            console.log("Produktu nie ma w sklepie");
+        }
+    }
+    else if(menu == "P"){
+        for(let x of koszyk.zakupy.keys()){
+            console.log(`Produkt: ${x} Ilość: ${koszyk.zakupy.get(x)}`);
+        }
+        //prezentacja: Produkt: .... Ilość: ....
+        //prezentacja: Produkt: .... Ilość: ....
+        //prezentacja: Produkt: .... Ilość: ....
+        //prezentacja: Produkt: .... Ilość: ....
+        
+    }
+    else if(menu == "U"){
+         //pytania: produkt, ilosc
+         produkt = prompt("Podaj produkt: ");
+
+
+        if(sklep.has(produkt)){
+            ilosc = pareInt(prompt("Podaj ilosc: "));
+
+            koszyk.usunProdukt(produkt, ilosc);
+        }
+        else{
+            console.log("Produktu nie ma w klepie")
+        }
+    }
+    else if(menu == "K"){
+        //PARGON:
+        console.log("PARGON");
+        //Produkt: .... Ilość:.... Cena:.... Wartość:....
+        //Produkt: .... Ilość:.... Cena:.... Wartość:....
+        //Produkt: .... Ilość:.... Cena:.... Wartość:....
+        let suma = 0;
+        for(let x of koszyk.zakupy.keys()){
+            let ilosc = koszyk.zakupy.get(x);
+            let cena = sklep.get(x);
+            let wartosc = ilosc * cena;
+            suma = wartosc + suma;
+            console.log(`Produkt: ${x} Ilość:${ilosc} Cena:${cena} Wartość:${wartosc}`);
+        }
+        //RAZEM DO ZAPLATY: .....
+        console.log(`RAZEM DO ZAPLATY: ${suma}`);
+        break;
+    }
+
+}
+
+
+</script>

@@ -1,0 +1,22 @@
+<meta charset="utf-8" />
+
+<script>
+
+class Zawodnik{
+
+    constructor(imie, wzrost, waga){
+        this.imie = imie;
+        this.wzrost = wzrost;
+        this.waga = waga;
+    }
+
+    bmi(){
+        let wynik = this.waga / (this.wzrost * this.wzrost);
+        console.log(`BMI zawodnika ${this.imie} wynosi ${wynik}`);
+    }
+}
+
+let zawodnik = new Zawodnik("Daniel", 1.91, 94);
+zawodnik.bmi();
+
+</script>

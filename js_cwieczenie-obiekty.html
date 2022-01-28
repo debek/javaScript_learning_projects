@@ -1,0 +1,109 @@
+<meta charset="utf-8" />
+
+<script>
+
+class Kursant{
+    constructor(imie, nazwisko, email){
+        this.imie = imie;
+        this.nazwisko = nazwisko;
+        this.email = email;
+    }
+}
+
+class Kurs{
+    constructor(nazwa, termin){
+        this.nazwa = nazwa;
+        this.termin = termin;
+        this.listaKursantow = [];
+    }
+}
+
+let listaKursow = [];
+while(true){
+
+    let menu = prompt("1-dodaj kurs, 2-wyswietl kursy, 3-usun kurs, 4-dodaj kursanta do kursu, 5-wyswietl kurs wraz z kursantami, 6-usun kursanta z kursu, 7-koniec");
+
+    if(menu == "1"){
+        //pytania: nazwa, termin
+        nazwa = prompt("Podaj nazwe kursu: ");
+        termin = prompt("Podaj termin kursu: ");
+        
+        kurs = new Kurs(nazwa, termin);
+        listaKursow.push(kurs);
+    }
+    else if(menu == "2"){
+        for(let x of listaKursow){
+            console.log(`${x.nazwa}`)
+        }
+    }
+    else if(menu == "3"){
+        //pytania: nazwa
+        nazwa = prompt("Podaj nazwe kursu: ");
+        index = -1;
+        for(let x of listaKursow){
+            index++;
+            if(x.nazwa == nazwa){
+                listaKursow.splice(index,1);
+                break;
+            }
+        }
+    }
+    else if(menu == "4"){
+        //pytania: nazwa, imie, nazwisko, email
+        nazwa = prompt("Podaj nazwe kursu: ");
+        imie = prompt("Podaj imie: ");
+        nazwisko = prompt("Podaj nazwisko: ");
+        email = prompt("Podaj email: ");
+
+        kursant = new Kursant(imie, nazwisko, email);
+
+        index = -1;
+        for(let x of listaKursow){
+            index++;
+            if(x.nazwa == nazwa){
+                listaKursow[index].listaKursantow.push(kursant);
+                console.log("Kursant dodany");
+                break;
+            }
+        }
+    }
+    else if(menu == "5"){
+        //pytania: nazwa
+        nazwa = prompt("Podaj nazwe kursu: ");
+        //prezentacja: Nazwa kursu:... Termin: ......
+        //Imię:.... Nazwisko:.... Email:. ......
+        for(let x of listaKursow){
+            if(x.nazwa == nazwa){
+                console.log(`Nazwa kursu: ${x.nazwa} Termin: ${x.termin}`)
+                for(let y of x.listaKursantow){
+                    console.log(`Imię: ${y.imie} Nazwisko: ${y.nazwisko} Email: ${y.email}`)
+                }
+            }
+        }
+    }
+    else if(menu == "6"){
+        //pytania: nazwa, nazwisko  
+        nazwa = prompt("Podaj nazwe kursu: ");
+        nazwisko = prompt("Podaj nazwisko: ");
+
+        for(let x of listaKursow){
+            if(x.nazwa == nazwa){
+                let index = -1;
+                for(let y of x.listaKursantow){
+                    index++;
+                    if(y.nazwisko == nazwisko){
+                        x.listaKursantow.splice(index,1);
+                        console.log("Kursant usuniety");
+                        break;
+                    }
+
+                }
+            }
+        }
+    }
+    else if(menu == "7"){
+        break;
+    }
+}
+
+</script>
