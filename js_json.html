@@ -1,0 +1,32 @@
+<meta charset="utf-8" />
+
+<script>
+
+class Auto{
+
+    constructor(marka,  model){
+        this.marka = marka;
+        this.model = model;
+    }
+}
+
+    let dane = [];
+
+    ob = new Auto("BMW", "X5");
+    dane.push(ob);
+
+    ob = new Auto("Mazda", "5");
+    dane.push(ob);
+
+    ob = new Auto("Fiat", "Punto");
+    dane.push(ob);
+
+    console.log(dane);
+
+    txt = JSON.stringify(dane);
+    console.log(txt);
+
+    alx = JSON.parse(txt);
+    console.log(alx[x].marka);
+
+</script>
