@@ -1,0 +1,24 @@
+<%- include('naglowek') %>
+
+<h2>Lista wpisów</h2>
+
+    <% dane.forEach(function(wartosc, index) { %>
+    
+        <div>
+            <p>
+                <b>
+                    <%= wartosc.tytul %>
+                </b>
+            </p>
+            <p>
+                    <%= wartosc.tresc %>
+            </p>
+            <p>
+                <a href="/usun/<%= index %>">usuń</a>
+                <a href="/edytuj/<%= index %>">edytuj</a>
+            </p>
+        </div>
+
+    <% }); %>
+
+<%- include('stopka') %>
