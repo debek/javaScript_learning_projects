@@ -1,0 +1,1 @@
+Trzeba uruchomoć komeną node
