@@ -28,6 +28,7 @@ class DodajKontakt extends Component{
         dane.push(kontakt);
         localStorage.setItem("KT", JSON.stringify(dane));
         
+        // SetState uruchamia tez ponizsza funkcje rander
         this.setState({redirect : true});
     }
 
@@ -43,7 +44,11 @@ class DodajKontakt extends Component{
     }
 
     return(
-      <div>
+      <div
+        style={{
+        border: "2px solid green",
+        }}
+      >
         
         <p>
             Imię:<br/>

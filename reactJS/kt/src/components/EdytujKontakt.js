@@ -32,10 +32,15 @@ class EdytujKontakt extends Component{
 
 
     return(
-        <div>
+      <div
+        style={{
+        border: "2px solid red",
+        }}
+      >
         
             <p>
                 Imię:<br/>
+                {/* Defaultvalue, dzieki ktoremu mozemy edytowac dane w imput */}
                 <input type="text" name="imie" id="imie" defaultValue={this.state.dane[this.state.id].imie} />
             </p>
             <p>

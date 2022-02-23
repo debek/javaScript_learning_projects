@@ -26,7 +26,11 @@ class UsunKontakt extends Component{
     }
 
     return(
-        <div>
+      <div
+        style={{
+        border: "2px solid purple",
+        }}
+      >
             <p>Czy napewno usunac poniższy kontakt ?</p>
             <p>
                 Imię: {this.state.dane[this.state.id].imie}

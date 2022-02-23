@@ -10,7 +10,11 @@ class App extends Component{
   render(){
 
     return(
-      <div>
+      <div
+        style={{
+          border: "5px solid black",
+        }}
+      >
         
         <h1>Książka telefoniczna</h1>
 

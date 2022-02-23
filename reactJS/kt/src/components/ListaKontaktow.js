@@ -10,7 +10,11 @@ class ListaKontaktow extends Component{
   render(){
 
     return(
-      <div>
+      <div
+        style={{
+        border: "2px solid blue",
+        }}
+      >
 
             <table border="1">
                 <tr>
